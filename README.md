@@ -1,36 +1,20 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Inspiration
+Natural disasters create zones of offline areas, this leaves gaps in communication. This leaves volunteers in the dark. To fix this we created an all in one solution of both offline communication app and a volunteer side that uses AI to assign tasks based on volunteer expertise. Working together to get victims the support they need.
 
-## Getting Started
+What it does
+The most complex part of our app is the offline no wifi communication, our app uses BLE to transmit packets of data to computers which can then send the data to other computers like a relay station. Our app communicates like TCP, not double checking if packets are sent, this is to save time as BLE can't transmit large packets all at once. So rechecking constantly if packets are sent (such as with UDP) isn't effienct. Along with that we use algorithms to make sure our path from one computer to another is as fast as possible, (the best possible path).
 
-First, run the development server:
+How we built it
+We built the program with Nextjs and javascript for frontend and backend. Then we used firebase for storage.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Challenges we ran into
+Offline connection between multiple computers.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Accomplishments that we're proud of
+Fast and accurate offline communication.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+What we learned
+BLE and how the internet works.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+What's next for RescuLink
+Better offline communication.
